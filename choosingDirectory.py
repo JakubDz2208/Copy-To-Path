@@ -5,9 +5,10 @@ import os
 
 path = "C:/"
 finall = path+"\copy"
-if os.path.isdir('copy'):
-    pass
-else: 
+try:
+    os.path.isdir('copy')
+    
+except: 
     os.mkdir(finall)
 finallpath = finall+"\path.txt"
 finallfolder = finall+"/folder.txt"
